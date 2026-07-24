@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* Dark mode via class strategy: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Georgia", "Times New Roman", serif;
+
+  /* Warm restaurant palette. Re-theme the whole site from here. */
+  --color-ember-50: #fdf6f0;
+  --color-ember-100: #f9e8da;
+  --color-ember-200: #f2cdb0;
+  --color-ember-400: #d97642;
+  --color-ember-500: #c65d28;
+  --color-ember-600: #a9481c;
+  --color-char-800: #2b211c;
+  --color-char-900: #1a1310;
+  --color-char-950: #100c0a;
+}
+
+/*
+ * Hero backdrop. No image files: a layered warm gradient plus a subtle
+ * "ember" glow, so the template ships with zero image dependencies and
+ * still looks like a restaurant. Drop a real photo in later if you like.
+ */
+.gradient-ember {
+  background-color: #1a1310;
+  background-image:
+    radial-gradient(at 18% 22%, rgba(217, 118, 66, 0.42) 0px, transparent 55%),
+    radial-gradient(at 82% 14%, rgba(198, 93, 40, 0.32) 0px, transparent 52%),
+    radial-gradient(at 70% 88%, rgba(120, 53, 15, 0.45) 0px, transparent 58%),
+    radial-gradient(at 30% 92%, rgba(69, 26, 3, 0.5) 0px, transparent 60%);
+}
+
+/* Warm paper texture for the menu block, drawn with gradients only. */
+.paper {
+  background-color: var(--color-ember-50);
+  background-image:
+    radial-gradient(at 10% 0%, rgba(242, 205, 176, 0.5) 0px, transparent 50%),
+    radial-gradient(at 90% 100%, rgba(249, 232, 218, 0.7) 0px, transparent 55%);
+}
+
+.dark .paper {
+  background-color: var(--color-char-900);
+  background-image:
+    radial-gradient(at 10% 0%, rgba(120, 53, 15, 0.22) 0px, transparent 50%),
+    radial-gradient(at 90% 100%, rgba(43, 33, 28, 0.8) 0px, transparent 55%);
+}
+
+/* Dotted leader between a menu item and its price. */
+.leader {
+  flex: 1 1 auto;
+  margin: 0 0.6rem;
+  border-bottom: 1px dotted currentColor;
+  opacity: 0.28;
+  transform: translateY(-0.28rem);
+}
+
+/* Form inputs — used by the reservation form. */
+.input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.925rem;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  color: currentColor;
+  opacity: 0.4;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-ember-500);
+  box-shadow: 0 0 0 3px rgba(198, 93, 40, 0.18);
+}
+
+.dark .input {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Make native date/time pickers legible in dark mode. */
+.dark .input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+/* Scroll-reveal (used by components/Reveal.tsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98),
+    transform 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
