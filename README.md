@@ -3,6 +3,7 @@
 **A production-ready restaurant website template built with Next.js 15, TypeScript, and Tailwind CSS v4.** Real HTML menus, reservations, opening hours, and local-SEO structured data. Clone it, edit one config file, deploy for free.
 
 **[Live demo →](https://pixelandoak-tablefork.pages.dev)**
+**[Template page →](https://pixelandoak.com/templates/restaurant-website-template/)**
 
 ![Table & Fork screenshot](./screenshot.png)
 
@@ -115,5 +116,5 @@ MIT — free for personal and commercial use. Attribution appreciated but not re
 
 ---
 
-Built by [Pixel & Oak](https://pixelandoak.com) — web design and AI development studio.
+Built by [Pixel & Oak](https://pixelandoak.com/templates/restaurant-website-template/) — web design and AI development studio.
 More free templates: [Nova (blog)](https://github.com/haider484991/nova-nextjs-blog-template) · [LaunchPad (SaaS)](https://github.com/haider484991/launchpad-nextjs-saas-template)

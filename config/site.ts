@@ -181,8 +181,11 @@ export const siteConfig = {
   },
 
   /** Footer note. */
-  footerNote:
-    "Built with the free Table & Fork template by Pixel & Oak.",
+  footerNote: "Built with the free Table & Fork template by",
+  footerCredit: {
+    label: "Pixel & Oak",
+    href: "https://pixelandoak.com/templates/restaurant-website-template/?utm_source=tablefork-template",
+  },
 } as const;
 
 export type SiteConfig = typeof siteConfig;
