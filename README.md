@@ -106,6 +106,10 @@ npx wrangler pages deploy out
 
 Netlify, Vercel, GitHub Pages, and any static host work the same way. Preview the production build locally with `npm run preview`.
 
+## Taking orders as well?
+
+This template shows the menu and takes reservations. If the restaurant also needs online ordering and a till, [Pixel & Oak POS](https://pixelandoak.com/pos/online-ordering-system/) is our restaurant POS for Windows: a commission-free ordering website whose menu comes from the till, with every order printed in the kitchen. It runs today at a restaurant in Karachi; restaurants elsewhere can join early access.
+
 ## Tech
 
 Next.js 15 (App Router, static export) · React 19 · TypeScript · Tailwind CSS v4 · zero runtime dependencies beyond React.
