@@ -5,6 +5,8 @@
 **[Live demo →](https://pixelandoak-tablefork.pages.dev)**
 **[Template page →](https://pixelandoak.com/templates/restaurant-website-template/)**
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhaider484991%2Ftablefork-nextjs-restaurant-template&project-name=tablefork-restaurant&repository-name=tablefork-restaurant)
+
 ![Table & Fork screenshot](./screenshot.png)
 
 ## Why this template exists
